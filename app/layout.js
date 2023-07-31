@@ -6,7 +6,6 @@ import Footer from '@/components/Footer'
 import Navbar from '@/components/Navbar'
 import { defaultLocale } from '@/middleware'
 import { Inter } from 'next/font/google'
-import localFont from 'next/font/local'
 
 export const metadata = {
     title: 'Create Next App',
@@ -20,20 +19,15 @@ const inter = Inter({
     variable: '--font-inter'
 })
 
-const euclid = localFont({
-    src: '../public/fonts/euclidcircular.ttf',
-    variable: '--font-euclid'
-})
-
 export default function RootLayout({ children, params }) {
     return (
         <html
             lang={params.lang ?? defaultLocale}
-            className={`${euclid.variable} ${inter.variable}`}
+            className={`${inter.variable}`}
         >
             <body>
                 <Navbar />
-                <main>{children}</main>
+                <main>{children} </main>
                 <Footer />
             </body>
         </html>

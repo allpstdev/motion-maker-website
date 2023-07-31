@@ -22,7 +22,7 @@ export const dictionary = {
             link_4_bold: 'Motion Maker',
             link_4_part_2: 'for free',
             link_5: 'Contact us',
-            bottom_left: '© Copyright 2023, All Rights Reserved by Fundamentals AI AG, Zug, Switzerland',
+            bottom_left: 'Fundamentals Motionmaker. All right reserved. © 2023',
             bottom_right_terms: 'Terms',
             bottom_right_privacy_policy: 'Privacy Policy'
         },
@@ -49,6 +49,7 @@ export const dictionary = {
             content_4_card:
                 'Integrate generative AI into your animation workflow, decrease production time and budget and be in control of the creative process of your project like never before. With Fundamentals Motion Maker.'
         },
+        features: {},
         about: {
             page_header: 'About',
             page_sub_header: 'Fundamentals Artificial Intelligence',
@@ -175,6 +176,7 @@ export const dictionary = {
             content_4_card:
                 'Integre IA generativa en su flujo de trabajo de animación, reduzca el tiempo y el presupuesto de producción y controle el proceso creativo de su proyecto como nunca antes. Con Fundamentos Motion Maker.'
         },
+        features: {},
         about: {
             page_header: 'Acerca de',
             page_sub_header: 'Fundamentos Inteligencia Artificial',

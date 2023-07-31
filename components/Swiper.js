@@ -6,8 +6,9 @@ import Image from 'next/image'
 import { useState } from 'react'
 import { Swiper, SwiperSlide, useSwiper } from 'swiper/react'
 
-import left_arrow from '../public/left-arrow.svg'
-import right_arrow from '../public/right-arrow.svg'
+import ai_assistant_card_avatar_1 from '../public/ai_assistant_card_avatar_1.png'
+import ai_assistant_card_avatar_2 from '../public/ai_assistant_card_avatar_2.png'
+import ai_assistant_card_avatar_3 from '../public/ai_assistant_card_avatar_3.png'
 
 const SwiperComponent = () => {
     const swiper = useSwiper()
@@ -23,45 +24,81 @@ const SwiperComponent = () => {
 
     return (
         <Swiper
-            slidesPerView={1}
+            slidesPerView={3}
             spaceBetween={10}
+            onSwiper={swiper => setSwiperRef(swiper)}
             breakpoints={{
-                1024: {
+                1440: {
                     slidesPerView: 3,
-                    spaceBetween: 50
+                    spaceBetween: 0
+                },
+                1080: {
+                    slidesPerView: 2.5,
+                    spaceBetween: 0
+                },
+                1024: {
+                    slidesPerView: 2.5,
+                    spaceBetween: 0
+                },
+                800: {
+                    slidesPerView: 1.5,
+                    spaceBetween: 0
+                },
+                375: {
+                    slidesPerView: 1.6,
+                    spaceBetween: 10
                 }
             }}
-            navigation={true}
-            onSwiper={swiper => setSwiperRef(swiper)}
         >
-            {[1, 5, 9, 12, 18, 21, 24, 30, 35, 42, 48, 50].map(e => (
-                <SwiperSlide key={e}>
-                    <div className='h-[600px] rounded-3xl border-[3px] border-black bg-white p-4'>
-                        <div className='h-2/5 w-full rounded-2xl border-[3px] border-black bg-[#FDF9F5D9]'></div>
-                        <p className='font-inter h-3/5 text-justify text-xl leading-10'>
-                            {
-                                'Integrate generative AI into your animation workflow, decrease production time and budget and be in control of the creative process of your project like never before. With Fundamentals Motion Maker.'
-                            }
-                        </p>
+            {[1, 2, 1, 2, 1, 2].map(e => (
+                <SwiperSlide
+                    key={e}
+                    className='pb-2'
+                >
+                    <div className='box-raidial-gradient-pattern rounded-3xl p-6'>
+                        <Image
+                            src={e === 1 ? ai_assistant_card_avatar_1 : ai_assistant_card_avatar_2}
+                            alt=''
+                            width={140}
+                            height={240}
+                            className='mx-auto'
+                        />
+                        <div className='h-[47%] w-44 pb-3'>
+                            <div className='mb-2.5 text-center text-xl font-medium leading-7 text-slate-800'>Artist Finny</div>
+                            <div className='flex flex-col gap-10'>
+                                <div className='h-2 w-full rounded-full bg-gray-200'>
+                                    <div
+                                        className='mb-2 h-2 rounded-full bg-violet-500'
+                                        style={{ width: '100%' }}
+                                    />
+                                    <div className='text-right text-sm font-medium leading-tight text-slate-700'>Animation experience</div>
+                                </div>
+                                <div className='h-2 w-full rounded-full bg-gray-200'>
+                                    <div
+                                        className='mb-2 h-2 rounded-full bg-violet-500'
+                                        style={{ width: '100%' }}
+                                    />
+                                    <div className='text-right text-sm font-medium leading-tight text-slate-700'>Project complexity</div>
+                                </div>
+                                <div className='h-2 w-full rounded-full bg-gray-200'>
+                                    <div
+                                        className='mb-2 h-2 rounded-full bg-violet-500'
+                                        style={{ width: '5%' }}
+                                    />
+                                    <div className='text-right text-sm font-medium leading-tight text-slate-700'>Educational aspect</div>
+                                </div>
+                                <div className='h-2 w-full rounded-full bg-gray-200'>
+                                    <div
+                                        className='mb-2 h-2 rounded-full bg-violet-500'
+                                        style={{ width: '100%' }}
+                                    />
+                                    <div className='text-right text-sm font-medium leading-tight text-slate-700'>Admin work</div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </SwiperSlide>
             ))}
-            <div className='flex justify-end mt-12 gap-10'>
-                <Image
-                    src={left_arrow}
-                    width={100}
-                    height={100}
-                    alt='left arrow for news swiper'
-                    onClick={prevHandler}
-                />
-                <Image
-                    src={right_arrow}
-                    width={100}
-                    height={100}
-                    alt='right arrow for news swiper'
-                    onClick={nextHandler}
-                />
-            </div>
         </Swiper>
     )
 }

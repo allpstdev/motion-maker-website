@@ -6,11 +6,41 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: var(--font-euclid);
+    font-family: var(--font-inter);
+    /* background: #000 !important;
+    color: #0f0 !important;
+    outline: solid #f00 1px !important; */
+}
+*:focus,
+*:hover {
+    outline: none;
 }
 
-body {
-    background-image: url('../public/bg-pattern.png');
-    background-repeat: repeat-y;
+.box-pattern {
+    background-image: url('../public/bg-pattern.svg');
+    background-repeat: no-repeat;
     background-size: contain;
+}
+
+@media (max-width: 800px) {
+    .box-pattern {
+        background-size: contain;
+        background-repeat: repeat;
+    }
+}
+.gradient-pattern {
+    background-image: url('../public/gradient-pattern.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.box-raidial-gradient-pattern {
+    background-image: url('../public/ai_assistant_card.png');
+    background-size: contain;
+    background-repeat: repeat-y;
+    width: 230px;
+    height: 100%;
+    /* Shadows/2 */
+    box-shadow:
+        0px 4px 8px 0px rgba(47, 43, 67, 0.1),
+        0px -1px 0px 0px rgba(47, 43, 67, 0.1) inset;
 }
