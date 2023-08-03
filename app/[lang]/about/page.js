@@ -1,144 +1,150 @@
-import ContentDescription from '@/components/content/Description'
-import EllipseComponent from '@/components/content/EllipseComponent'
 import ContentHeader from '@/components/content/Header'
-import Header from '@/components/Header'
-import PageDescription from '@/components/PageDescription'
-import SubHeader from '@/components/SubHeader'
+import PinkGradientBackground from '@/components/PinkGradientBackground'
 import { dictionary } from '@/content'
 import Image from 'next/image'
 
-import company_values from '../../../public/company_values.svg'
-import demo from '../../../public/Fundamentals_logo_lg.png'
-import profile_gunther from '../../../public/profile_gunther.png'
-import profile_mario from '../../../public/profile_mario.png'
-import profile_mike from '../../../public/profile_mike.png'
+import adobe_logo from '../../../public/adobe_logo.svg'
+import airbnb_logo from '../../../public/airbnb_logo.svg'
+import dropbox_logo from '../../../public/dropbox_logo.svg'
+import figma_logo from '../../../public/figma_logo.svg'
+import framer_logo from '../../../public/framer_logo.svg'
+import google_colored_logo from '../../../public/google_colored_logo.svg'
+import google_logo from '../../../public/google_logo.svg'
+import social_color_linkedin from '../../../public/social_color_linkedin.svg'
+import social_color_twitter from '../../../public/social_color_twitter.svg'
 
 const AboutPage = ({ params }) => {
-    const {
-        page_header,
-        page_sub_header,
-        page_description,
-        content_1_header,
-        content_1_decription,
-        content_2_header,
-        content_2_decription,
-        mario_designation,
-        mario_description,
-        mario_qoute,
-        mike_designation,
-        mike_description,
-        mike_qoute,
-        gunther_designation,
-        gunther_description,
-        gunther_qoute
-    } = dictionary[params.lang]?.about
+    const {} = dictionary[params.lang]?.about
 
     return (
-        <div>
-            <Header text={page_header} />
-            <SubHeader text={page_sub_header} />
-            <PageDescription text={page_description} />
-
-            <Image
-                alt='demo'
-                src={demo}
-                width='0'
-                height='0'
-                sizes='100vw'
-                className='w-100vw mx-auto mb-24 xl:mb-96 mt-12 h-auto px-6 xl:px-8'
-            />
-            <EllipseComponent />
-
-            <section className='bg-[#FDF9F5] pt-20 px-4 xl:pt-40 xl:pb-12 xl:px-28'>
-                <div className='mt-8 xl:mt-32'>
-                    <ContentHeader text={content_1_header} />
-                    <ContentDescription text={content_1_decription} />
+        <>
+            <PinkGradientBackground />
+            <section className='relative left-0 right-0 top-0'>
+                <ContentHeader
+                    customClass={'mx-auto flex flex-col max-w-screen-md items-center text-center px-6 lg:px-0'}
+                    pill_color={'primary'}
+                    pill_text={'About us'}
+                    header_text={'Fundamentals Artificial Intelligence AG'}
+                    highlightHeaderWord={'Artificial Intelligence'}
+                    description_text={
+                        'Lorem ipsum dolor sit amet consectetur. Semper ac nisl cursus convallis sem ornare ultricies est. Sed iaculis dui amet sed sociis lacus.'
+                    }
+                />
+                <div className='container mx-auto flex flex-col justify-center  gap-3 py-16 md:flex-row'>
+                    <div className='inline-flex h-auto w-full flex-col items-start justify-start rounded-[32px] border border-slate-800 border-opacity-10 bg-white p-12 md:w-1/2'>
+                        <div className='flex h-auto flex-col items-start justify-start gap-6 '>
+                            <div className='flex h-auto flex-col items-start justify-start gap-4 '>
+                                <div className='text-2xl font-semibold leading-loose text-slate-800'>Lorem</div>
+                                <div className='mb-6 text-base font-normal leading-normal text-slate-800 text-opacity-80'>
+                                    Fundamentals AI is a tech company located in Zug, Switzerland. We strive to create a bridge between art
+                                    and technology, incorporating cutting edge technologies based on Artificial Intelligence into the
+                                    workflow of designers across disciplines.
+                                </div>
+                            </div>
+                        </div>
+                        <div className='inline-flex items-center justify-center gap-2 self-stretch rounded-xl bg-gradient-to-r from-violet-500 to-violet-400 px-4 py-3 shadow'>
+                            <div className='flex items-center justify-start gap-2'>
+                                <div className='text-center text-base font-medium leading-normal text-white'>
+                                    Visit our website to learn more
+                                </div>
+                                <div className='relative h-5 w-5' />
+                            </div>
+                        </div>
+                    </div>
+                    <div className='inline-flex h-auto w-full flex-col items-start justify-start rounded-[32px] border border-slate-800 border-opacity-10 bg-white p-12 md:w-1/2'>
+                        <div className='flex h-auto flex-col items-start justify-start gap-6 '>
+                            <div className='flex h-auto flex-col items-start justify-start gap-4 '>
+                                <div className='text-2xl font-semibold leading-loose text-slate-800'>Lorem</div>
+                                <div className='mb-6 text-base font-normal leading-normal text-slate-800 text-opacity-80'>
+                                    Lorem ipsum dolor sit amet consectetur. Semper ac nisl cursus convallis sem ornare ultricies est. Sed
+                                    iaculis dui amet sed sociis lacus.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div className='my-20 xl:my-60'>
-                    <Image
-                        alt='demo'
-                        src={company_values}
-                        width='0'
-                        height='0'
-                        sizes='100vw'
-                        className='w-100vw mx-auto px-0 xl:px-8'
-                    />
+                <div className='container mx-auto mb-11 h-[394px] rounded-2xl bg-zinc-100'></div>
+                <div className='inline-flex h-auto w-full flex-col items-center justify-start gap-12 bg-gradient-to-r from-slate-600 to-gray-500 py-16'>
+                    <div className='flex h-auto flex-col items-center justify-start gap-12'>
+                        <div className='text-center text-lg font-normal leading-relaxed text-gray-300'>
+                            Trusted by the biggest companies
+                        </div>
+                        <div className='inline-flex flex-wrap justify-center gap-6'>
+                            <Image
+                                src={adobe_logo}
+                                width={180}
+                                height={40}
+                                alt=''
+                            />
+                            <Image
+                                src={airbnb_logo}
+                                width={180}
+                                height={40}
+                                alt=''
+                            />
+                            <Image
+                                src={figma_logo}
+                                width={180}
+                                height={40}
+                                alt=''
+                            />
+                            <Image
+                                src={framer_logo}
+                                width={180}
+                                height={40}
+                                alt=''
+                            />
+                            <Image
+                                src={google_logo}
+                                width={180}
+                                height={40}
+                                alt=''
+                            />
+                            <Image
+                                src={dropbox_logo}
+                                width={180}
+                                height={40}
+                                alt=''
+                            />
+                        </div>
+                    </div>
                 </div>
-
-                <div className='mt-8 xl:mt-32'>
-                    <ContentHeader text={content_2_header} />
-                    <ContentDescription text={content_2_decription} />
-                    <div className='mt-20 xl:mt-48 -mb-[1px] xl:-mb-[2px] ml-16 xl:ml-44 h-[1px] w-4/5 bg-black' />
-                    <div className='flex flex-row'>
-                        <Image
-                            alt='Mairo Wiedl profile picture'
-                            width={0}
-                            height={0}
-                            className='h-auto w-28 xl:w-80 '
-                            src={profile_mario}
-                        />
-                        <div className='w-full flex flex-col justify-center border-b border-black pl-7'>
-                            <div className='mb-4 text-2xl xl:text-7xl font-normal tracking-widest'>Mario Wiedl</div>
-                            <div className='text-lg xl:text-4xl font-light tracking-default text-black/[0.8]'>{mario_designation}</div>
-                        </div>
-                    </div>
-                    <div className='py xl:py-12'>
-                        <div className='mt-10 xl:mt-20 text-center text-base xl:text-4xl font-normal leading-8 xl:leading-[66px] tracking-widest text-black'>
-                            {mario_description}
-                        </div>
-                        <div className='mt-8 xl:my-10 text-center text-sm xl:text-2xl font-normal leading-8 xl:leading-[66px]  tracking-widest text-black'>
-                            {mario_qoute}
-                        </div>
-                    </div>
-                    <br />
-                    <div className='mt-20 xl:mt-48 -mb-[1px] xl:-mb-[2px] ml-14 xl:ml-44 h-[1px] w-4/5 bg-black' />
-                    <div className='flex flex-row'>
-                        <Image
-                            alt='Mairo Wiedl profile picture'
-                            width={0}
-                            height={0}
-                            className='h-auto w-28 xl:w-80 '
-                            src={profile_mike}
-                        />
-                        <div className='w-full flex flex-col justify-center border-b border-black pl-7'>
-                            <div className='mb-4 text-2xl xl:text-7xl font-normal tracking-widest'>Mike Milligan</div>
-                            <div className='text-lg xl:text-4xl font-light tracking-default text-black/[0.8]'>{mike_designation}</div>
-                        </div>
-                    </div>
-                    <div className='py xl:py-12'>
-                        <div className='mt-10 xl:mt-20 text-center text-base xl:text-4xl font-normal leading-8 xl:leading-[66px] tracking-widest text-black'>
-                            {mike_description}
-                        </div>
-                        <div className='mt-8 xl:my-10 text-center text-sm xl:text-2xl font-normal leading-8 xl:leading-[66px]  tracking-widest text-black'>
-                            {mike_qoute}
-                        </div>
-                    </div>
-                    <br />
-                    <div className='mt-20 xl:mt-48 -mb-[2px] xl:-mb-[2px] ml-14 xl:ml-44 h-[1px] w-4/5 bg-black' />
-                    <div className='flex flex-row'>
-                        <Image
-                            alt='Mairo Wiedl profile picture'
-                            width={0}
-                            height={0}
-                            className='h-36 xl:h-auto w-32 xl:w-80'
-                            src={profile_gunther}
-                        />
-                        <div className='w-full flex flex-col justify-center border-b border-black pl-3 xl:pl-7'>
-                            <div className='mb-4 text-2xl xl:text-7xl font-normal tracking-widest'>Günther Lüttecke</div>
-                            <div className='text-lg xl:text-4xl font-light tracking-default text-black/[0.8]'>{gunther_designation}</div>
-                        </div>
-                    </div>
-                    <div className='py xl:py-12'>
-                        <div className='mt-10 xl:mt-20 text-center text-base xl:text-4xl font-normal leading-8 xl:leading-[66px] tracking-widest text-black'>
-                            {gunther_description}
-                        </div>
-                        <div className='mt-5 xl:my-10 text-center text-sm xl:text-2xl font-normal leading-8 xl:leading-[66px]  tracking-widest text-black'>
-                            {gunther_qoute}
+                <div className='inline-flex h-auto w-full flex-col items-center justify-start gap-12 border-b bg-white py-16'>
+                    <div className='flex h-auto flex-col items-center justify-start gap-12'>
+                        <div className='text-2xl font-semibold leading-loose text-slate-800'>Visit our Socials</div>
+                        <div className='inline-flex flex-wrap items-start justify-center gap-6 '>
+                            <div className='flex items-center justify-center gap-3 rounded-lg border border-gray-300 bg-white px-4 py-2.5 shadow'>
+                                <Image
+                                    src={google_colored_logo}
+                                    width={24}
+                                    height={24}
+                                    alt=''
+                                />
+                                <div className='text-base font-semibold leading-normal text-slate-700'>fundamentals-ai.com</div>
+                            </div>
+                            <div className='flex items-center justify-center gap-3 rounded-lg border border-gray-300 bg-white px-4 py-2.5 shadow'>
+                                <Image
+                                    src={social_color_twitter}
+                                    width={24}
+                                    height={24}
+                                    alt=''
+                                />
+                                <div className='text-base font-semibold leading-normal text-slate-700'>/fundamentals-ai</div>
+                            </div>
+                            <div className='flex items-center justify-center gap-3 rounded-lg border border-gray-300 bg-white px-4 py-2.5 shadow'>
+                                <Image
+                                    src={social_color_linkedin}
+                                    width={24}
+                                    height={24}
+                                    alt=''
+                                />
+                                <div className='text-base font-semibold leading-normal text-slate-700'>Fundamentals AI</div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </section>
-        </div>
+        </>
     )
 }
 
