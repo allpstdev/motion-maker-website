@@ -27,7 +27,7 @@ const ContentHeader = ({ pill_text, description_text, header_text, pill_color, h
                 headerText={header_text}
                 highlightedWord={highlightHeaderWord}
             />
-            <div className='max-w-lg text-lg font-normal leading-relaxed text-slate-800 text-opacity-60'>{description_text}</div>
+            <div className='max-w-2xl text-lg font-normal leading-relaxed text-slate-800 text-opacity-60'>{description_text}</div>
         </div>
     )
 }

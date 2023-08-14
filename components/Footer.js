@@ -31,7 +31,7 @@ const Footer = () => {
     } = dictionary[params.lang]?.footer
 
     return (
-        <footer>
+        <footer className='border-t'>
             <div className='bg-white py-12'>
                 <div className='container lg:mx-auto'>
                     <div className='mx-6 grid grid-cols-1 gap-8 sm:mx-6 lg:mx-1 lg:mt-0 lg:grid-cols-3'>

@@ -26,7 +26,7 @@ export default function RootLayout({ children, params }) {
             className={`${inter.variable}`}
         >
             <body>
-                <Navbar />
+                {/* <Navbar /> */}
                 <main>{children} </main>
                 <Footer />
             </body>

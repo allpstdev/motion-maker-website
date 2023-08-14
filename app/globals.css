@@ -21,9 +21,18 @@
     background-repeat: no-repeat;
     background-size: contain;
 }
+.small-box-pattern {
+    background-image: url('../public/small-box-pattern.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 
 @media (max-width: 800px) {
     .box-pattern {
+        background-size: contain;
+        background-repeat: repeat;
+    }
+    .small-box-pattern {
         background-size: contain;
         background-repeat: repeat;
     }

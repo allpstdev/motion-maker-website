@@ -4,13 +4,10 @@ import SwiperComponent from '@/components/Swiper'
 import { dictionary } from '@/content'
 import Image from 'next/image'
 
-import ai_assistant_card_avatar_1 from '../../public/ai_assistant_card_avatar_1.png'
-import ai_assistant_card from '../../public/ai_assistant_card.png'
 import apple_white from '../../public/apple_white.svg'
 import arrow_right from '../../public/arrow_right.svg'
 import avatar_group from '../../public/avatar_group.svg'
 import award_icon from '../../public/award_icon.svg'
-import book_closed_icon from '../../public/book_closed_icon.svg'
 import chevron_right_icon from '../../public/chevron_right_icon.svg'
 import data_flow_icon from '../../public/data_flow_icon.svg'
 import facebook_white from '../../public/facebook_white.svg'
@@ -93,7 +90,7 @@ const HomePage = ({ params }) => {
             <section className='box-pattern relative top-0 float-right flex flex-col gap-6 bg-[radial-gradient(at_center_top,_#d7c6f7,_#b3e6f1,_#ffffff)] py-0 lg:w-full lg:flex-row lg:py-16 xl:mb-0 xl:w-11/12'>
                 <div className='flex h-auto flex-col gap-8 px-6 lg:h-[524px] lg:w-11/12 xl:pl-0'>
                     <div className='inline-flex w-fit items-center gap-2 rounded-full border bg-white py-1.5 pl-1.5 pr-2'>
-                        <div className='rounded-full bg-[#DCDAE2] px-2 py-0.5 text-sm font-medium leading-tight text-slate-800'>
+                        <div className='rounded-full bg-gray-100 px-2 py-0.5 text-sm font-medium leading-tight text-slate-800'>
                             Early 2023 Release
                         </div>
                         <div className='inline-flex gap-2 text-sm font-medium leading-tight text-slate-800'>
@@ -169,7 +166,7 @@ const HomePage = ({ params }) => {
                         <div className='flex h-full w-full place-items-center px-6 lg:w-2/5 lg:px-0'>
                             <div className='flex w-5/6 flex-col'>
                                 <Image
-                                    src={book_closed_icon}
+                                    src={chevron_right_icon}
                                     alt='book_closed_icon'
                                     width={64}
                                     height={64}

@@ -37,7 +37,7 @@ const FeaturesPage = ({ params }) => {
 
     return (
         <>
-            <PinkGradientBackground />
+            <PinkGradientBackground className={'left-0 right-0 top-0'} />
             <section className='relative left-0 right-0 top-0'>
                 <ContentHeader
                     customClass={'mx-auto flex flex-col max-w-screen-md items-center text-center px-6 lg:px-0'}

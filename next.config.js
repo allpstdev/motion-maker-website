@@ -4,6 +4,14 @@ const nextConfig = {
         styledComponents: {
             displayName: false
         }
+    },
+    images: {
+        remotePatterns: [
+            {
+                protocol: 'https',
+                hostname: 'placehold.co'
+            }
+        ]
     }
 }
 

@@ -1,53 +1,28 @@
-import EllipseComponent from '@/components/content/EllipseComponent'
-import Header from '@/components/Header'
-import SubHeader from '@/components/SubHeader'
 import { dictionary } from '@/content'
-import Image from 'next/image'
 
-import demo from '../../../public/Fundamentals_logo_lg.png'
-import products_interface from '../../../public/products_interface.png'
-import products_motion_maker from '../../../public/products_motion_maker.png'
+import { InputForm } from './components/Form'
 
-const ContactPage = ({ params }) => {
-    const { page_header, page_sub_header } = dictionary[params.lang]?.contact
+const LoginPage = ({ params }) => {
+    const {} = dictionary[params.lang]?.products
     return (
-        <div>
-            <Header text={page_header} />
-            <SubHeader text={page_sub_header} />
-            <Image
-                alt='demo'
-                src={demo}
-                width='0'
-                height='0'
-                className='w-full lg:w-1/2 mx-auto lg:mx-auto mb-72 mt-20 invisible'
-            />
-            <EllipseComponent />
-            <section className='bg-[#FDF9F5] pt-40 pb-12 px-28'>
-                <div className='mt-32 invisible'>
-                    <div className='flex w-full flex-col items-center justify-center gap-32'>
-                        <div className='flex w-100 items-center justify-center rounded-[32px] border-2 border-black'>
-                            <Image
-                                src={products_motion_maker}
-                                alt='product motion maker'
-                                width='0'
-                                height='0'
-                                className='w-100 h-auto'
-                            />
+        <div className='flex h-auto min-h-[1108px] flex-col lg:flex-row 2xl:w-full'>
+            <div className='w-full bg-login_image bg-cover lg:h-auto lg:w-1/2' />
+            <div className='relative mx-auto flex h-full w-full flex-row items-center justify-center py-24 lg:w-1/2'>
+                <div className='inline-flex h-auto w-2/3 flex-col items-start justify-start gap-12 lg:w-1/2'>
+                    <div className='flex h-auto flex-col items-start justify-start gap-6 self-stretch'>
+                        <div className='self-stretch text-5xl font-semibold leading-[60px] text-gray-900'>
+                            Get in Contact with our Maker team
                         </div>
-                        <div className='flex w-100 items-center justify-center rounded-[32px] border-2 border-black'>
-                            <Image
-                                src={products_interface}
-                                alt='product motion maker'
-                                width='0'
-                                height='0'
-                                className='w-100 h-auto'
-                            />
+                        <div className='self-stretch'>
+                            <span className='text-xl font-normal leading-[30px] text-slate-600'>You can reach us anytime via </span>
+                            <span className='text-xl font-medium leading-[30px] text-violet-700'>hi@motionmaker.com</span>
                         </div>
                     </div>
+                    <InputForm />
                 </div>
-            </section>
+            </div>
         </div>
     )
 }
 
-export default ContactPage
+export default LoginPage

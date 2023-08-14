@@ -1,5 +1,5 @@
 import React from 'react'
 
-const PinkGradientBackground = () => <div className='gradient-pattern relative left-0 right-0 top-0 h-20 bg-center' />
+const PinkGradientBackground = ({ className }) => <div className={'gradient-pattern relative h-20 bg-center ' + className} />
 
 export default PinkGradientBackground
