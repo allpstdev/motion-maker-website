@@ -9,7 +9,7 @@ export default function BlogPage() {
             <section className='container mx-auto flex flex-col items-center py-24'>
                 <ContentHeader
                     customClass={'mx-auto flex w-full max-w-screen-md flex-col items-center text-center px-6 lg:px-0'}
-                    pill_color={'vanilla'}
+                    variant={'tertiary'}
                     pill_text={'Features'}
                     header_text={'Stories and interviews'}
                     description_text={

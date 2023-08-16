@@ -1,7 +1,9 @@
 import ContentHeader from '@/components/content/Header'
 import PinkGradientBackground from '@/components/PinkGradientBackground'
 import SwiperComponent from '@/components/Swiper'
+import { Button } from '@/components/ui/button'
 import { dictionary } from '@/content'
+import { Instagram } from 'lucide-react'
 import Image from 'next/image'
 
 import apple_white from '../../public/apple_white.svg'
@@ -113,16 +115,22 @@ const HomePage = ({ params }) => {
                         pellentesque purus. Pellentesque amet nunc.
                     </div>
                     <div className='flex gap-3'>
-                        <button className='inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-violet-500 to-violet-400 px-4 py-3 text-sm text-white shadow-inner lg:text-base'>
+                        <Button
+                            variant='secondary'
+                            className='inline-flex items-center gap-2 rounded-xl px-4 py-3 text-sm shadow lg:text-base'
+                        >
                             <Image
                                 src={zap_icon}
                                 alt='zap_icon'
                             />
                             Get started
-                        </button>
-                        <button className='inline-flex items-center justify-center gap-2 rounded-xl border border-slate-800 border-opacity-10 bg-white px-4 py-3 text-center text-sm font-medium leading-normal text-black shadow lg:text-base'>
+                        </Button>
+                        <Button
+                            variant='tertiary'
+                            className='rounded-xl px-4 py-3 text-center text-sm font-medium leading-normal shadow lg:text-base'
+                        >
                             Free Motion Maker trial
-                        </button>
+                        </Button>
                     </div>
                     <div className='inline-flex items-center gap-3 text-sm font-normal leading-tight text-slate-800 text-opacity-60'>
                         <Image
@@ -145,7 +153,7 @@ const HomePage = ({ params }) => {
 
             <section className='container mx-auto px-6 xl:px-0'>
                 <ContentHeader
-                    pill_color={'primary'}
+                    variant={'secondary'}
                     pill_text={'Features'}
                     header_text={'Boost your next animation project with AI'}
                     description_text={
@@ -166,7 +174,7 @@ const HomePage = ({ params }) => {
                         <div className='flex h-full w-full place-items-center px-6 lg:w-2/5 lg:px-0'>
                             <div className='flex w-5/6 flex-col'>
                                 <Image
-                                    src={chevron_right_icon}
+                                    src={data_flow_icon}
                                     alt='book_closed_icon'
                                     width={64}
                                     height={64}
@@ -180,18 +188,14 @@ const HomePage = ({ params }) => {
                                     Lorem ipsum dolor sit amet consectetur. Netus pellentesque dictum mauris sed amet lacus urna sed semper.
                                     In sit aliquam pretium elit nunc diam felis eu.
                                 </div>
-                                <div className='inline-flex h-10 w-fit items-center justify-center rounded-xl bg-slate-800 bg-opacity-5 px-4 py-2'>
-                                    <div className='flex items-center justify-start gap-2'>
-                                        <div className='inline-flex text-center text-base font-medium leading-normal text-black'>
-                                            Learn more
-                                            <Image
-                                                alt='chevron_right_icon'
-                                                src={chevron_right_icon}
-                                                className='ml-2'
-                                            />
-                                        </div>
-                                    </div>
-                                </div>
+                                <Button className='h-10 w-fit rounded-xl px-4 py-2 text-base font-medium leading-normal'>
+                                    Learn more
+                                    <Image
+                                        alt='chevron_right_icon'
+                                        src={chevron_right_icon}
+                                        className='ml-2'
+                                    />
+                                </Button>
                             </div>
                         </div>
                     </div>
@@ -208,7 +212,12 @@ const HomePage = ({ params }) => {
                             <div className='mb-4 text-base font-normal leading-normal text-slate-800 text-opacity-60'>
                                 Lorem ipsum dolor sit amet consectetur. Integer varius gravida.
                             </div>
-                            <div className='text-base font-medium leading-normal text-slate-800'>Learn more</div>
+                            <Button
+                                variant='link'
+                                className='text-base font-medium leading-normal text-slate-800'
+                            >
+                                Learn more
+                            </Button>
                         </div>
                         <div className='rounded-3xl border p-12'>
                             <Image
@@ -222,7 +231,12 @@ const HomePage = ({ params }) => {
                             <div className='mb-4 text-base font-normal leading-normal text-slate-800 text-opacity-60'>
                                 Lorem ipsum dolor sit amet consectetur. Integer varius gravida.
                             </div>
-                            <div className='text-base font-medium leading-normal text-slate-800'>Learn more</div>
+                            <Button
+                                variant='link'
+                                className='text-base font-medium leading-normal text-slate-800'
+                            >
+                                Learn more
+                            </Button>
                         </div>
                         <div className='rounded-3xl border p-12'>
                             <Image
@@ -236,14 +250,19 @@ const HomePage = ({ params }) => {
                             <div className='mb-4 text-base font-normal leading-normal text-slate-800 text-opacity-60'>
                                 Lorem ipsum dolor sit amet consectetur. Integer varius gravida.
                             </div>
-                            <div className='text-base font-medium leading-normal text-slate-800'>Learn more</div>
+                            <Button
+                                variant='link'
+                                className='text-base font-medium leading-normal text-slate-800'
+                            >
+                                Learn more
+                            </Button>
                         </div>
                     </div>
                 </div>
             </section>
             <section className='container mx-auto px-6 xl:px-0'>
                 <ContentHeader
-                    pill_text={'Features'}
+                    pill_text={'Subheading'}
                     header_text={'Developed with Industry Leaders'}
                     description_text={
                         'Lorem ipsum dolor sit amet consectetur. Urna id purus in convallis elementum tellus vehicula. Facilisis vitae in sit pellentesque in.'
@@ -291,7 +310,10 @@ const HomePage = ({ params }) => {
                                 </div>
                             </div>
 
-                            <div className='inline-flex h-11 w-fit items-center gap-2 rounded-lg border px-4 py-2.5 text-sm font-normal leading-tight text-slate-600'>
+                            <Button
+                                variant='tertiary'
+                                className='inline-flex h-11 w-fit items-center gap-2 rounded-lg px-4 py-2.5 text-sm font-normal leading-tight text-slate-600'
+                            >
                                 <div className='h-2.5 w-2.5 rounded-full bg-green-500' />
                                 Visit on
                                 <Image
@@ -299,7 +321,7 @@ const HomePage = ({ params }) => {
                                     alt=''
                                     src={imdb_socialnetwork}
                                 />
-                            </div>
+                            </Button>
                         </div>
                     </div>
                     <div className='order-first flex h-full w-full flex-row justify-start lg:order-first lg:w-1/2'>
@@ -341,7 +363,10 @@ const HomePage = ({ params }) => {
                                 />
                             </div>
 
-                            <div className='inline-flex h-11 w-fit items-center gap-2 rounded-lg border px-4 py-2.5 text-sm font-normal leading-tight text-slate-600'>
+                            <Button
+                                variant='tertiary'
+                                className='inline-flex h-11 w-fit items-center gap-2 rounded-lg px-4 py-2.5 text-sm font-normal leading-tight text-slate-600'
+                            >
                                 <div className='h-2.5 w-2.5 rounded-full bg-green-500' />
                                 Visit on
                                 <Image
@@ -349,7 +374,7 @@ const HomePage = ({ params }) => {
                                     alt=''
                                     src={imdb_socialnetwork}
                                 />
-                            </div>
+                            </Button>
                         </div>
                     </div>
                     <div className='order-first flex h-full w-full flex-row justify-end lg:order-last lg:w-1/2'>
@@ -368,7 +393,7 @@ const HomePage = ({ params }) => {
             </section>
             <section className='container mx-auto px-6 lg:px-0'>
                 <ContentHeader
-                    pill_color={'primary'}
+                    variant={'secondary'}
                     pill_text={'User Groups'}
                     header_text={'Built with a purpose'}
                     description_text={
@@ -489,30 +514,30 @@ const HomePage = ({ params }) => {
                             </div>
                         </div>
                         <div className='inline-flex items-start justify-center gap-4 self-stretch'>
-                            <div className='flex items-center justify-center gap-2 rounded-xl bg-blue-600 px-4 py-3 shadow'>
-                                <div className='flex items-center justify-start gap-2'>
-                                    <div className='relative h-5 w-5'>
-                                        <Image
-                                            src={facebook_white}
-                                            alt=''
-                                            fill
-                                        />
-                                    </div>
-                                    <div className='text-center text-base font-medium leading-normal text-white'>Facebook</div>
-                                </div>
-                            </div>
-                            <div className='flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-amber-600 via-red-500 to-fuchsia-500 px-4 py-3 shadow'>
-                                <div className='flex items-center justify-start gap-2'>
-                                    <div className='relative h-5 w-5'>
-                                        <Image
-                                            src={instagram_white}
-                                            alt=''
-                                            fill
-                                        />
-                                    </div>
-                                    <div className='text-center text-base font-medium leading-normal text-white'>Instagram</div>
-                                </div>
-                            </div>
+                            <Button
+                                variant='tertiary'
+                                className='inline-flex gap-2 rounded-xl border-none bg-blue-600 px-4 py-3 text-base font-medium leading-normal text-white shadow'
+                            >
+                                <Image
+                                    src={facebook_white}
+                                    alt=''
+                                    width={20}
+                                    height={20}
+                                />
+                                Facebook
+                            </Button>
+                            <Button
+                                variant='secondary'
+                                className='inline-flex gap-2 rounded-xl border-none bg-gradient-to-r from-amber-600 via-red-500 to-fuchsia-500 px-4 py-3 text-base font-medium leading-normal text-white shadow'
+                            >
+                                <Image
+                                    src={instagram_white}
+                                    alt=''
+                                    width={20}
+                                    height={20}
+                                />
+                                Instagram
+                            </Button>
                         </div>
                     </div>
                     <div className='text-center text-lg font-normal leading-relaxed text-slate-800 text-opacity-60'>
@@ -538,9 +563,12 @@ const HomePage = ({ params }) => {
                                 <span className='text-sm font-normal leading-tight text-slate-600'>.</span>
                             </div>
                         </div>
-                        <button className='flex w-[125px] items-center justify-center gap-3 self-center rounded-xl bg-gradient-to-r from-violet-500 to-violet-400 px-[18px] py-2.5 shadow xl:self-start'>
-                            <div className='text-base font-semibold leading-normal text-white'>Get started</div>
-                        </button>
+                        <Button
+                            variant='secondary'
+                            className='self-center rounded-xl px-[18px] py-2.5 text-base font-semibold leading-normal xl:self-start'
+                        >
+                            Get started
+                        </Button>
                     </div>
                 </div>
             </section>
@@ -548,7 +576,6 @@ const HomePage = ({ params }) => {
                 <div className='h-[600px] lg:h-auto lg:w-1/2'>
                     <ContentHeader
                         customClass={'flex flex-col mb-6 max-w-lg items-left text-left'}
-                        pill_color={'primary'}
                         pill_text={'AI Assistant'}
                         header_text={'Finny: Your Virtual Assistant'}
                         description_text={
@@ -563,42 +590,42 @@ const HomePage = ({ params }) => {
                         Lorem ipsum dolor sit amet consectetur. Velit dapibus auctor aenean lacus. Viverra molestie risus pharetra.
                     </div> */}
                     <div className='grid-col-3 grid h-12 max-w-lg items-start justify-start gap-4 xl:flex'>
-                        <div className='flex items-center justify-center gap-2 rounded-xl bg-slate-800 px-4 py-3 shadow'>
-                            <div className='flex items-center justify-start gap-2'>
-                                <div className='relative h-5 w-5'>
-                                    <Image
-                                        src={windows_white}
-                                        alt=''
-                                        fill
-                                    />
-                                </div>
-                                <div className='text-center text-base font-medium leading-normal text-white'>Windows</div>
-                            </div>
-                        </div>
-                        <div className='flex items-center justify-center gap-2 rounded-xl bg-slate-800 px-4 py-3 shadow'>
-                            <div className='flex items-center justify-start gap-2'>
-                                <div className='relative h-5 w-5'>
-                                    <Image
-                                        src={apple_white}
-                                        alt=''
-                                        fill
-                                    />
-                                </div>
-                                <div className='text-center text-base font-medium leading-normal text-white'>Mac OS</div>
-                            </div>
-                        </div>
-                        <div className='flex items-center justify-center gap-2 rounded-xl bg-slate-800 px-4 py-3 shadow'>
-                            <div className='flex items-center justify-start gap-2'>
-                                <div className='relative h-5 w-5'>
-                                    <Image
-                                        src={google_play_white}
-                                        alt=''
-                                        fill
-                                    />
-                                </div>
-                                <div className='text-center text-base font-medium leading-normal text-white'>Google Play</div>
-                            </div>
-                        </div>
+                        <Button
+                            variant='tertiary'
+                            className='inline-flex gap-2 rounded-xl border-none bg-slate-800 px-4 py-3 text-base font-medium leading-normal text-white shadow'
+                        >
+                            <Image
+                                src={windows_white}
+                                alt=''
+                                width={20}
+                                height={20}
+                            />
+                            Windows
+                        </Button>
+                        <Button
+                            variant='tertiary'
+                            className='inline-flex gap-2 rounded-xl border-none bg-slate-800 px-4 py-3 text-base font-medium leading-normal text-white shadow'
+                        >
+                            <Image
+                                src={apple_white}
+                                alt=''
+                                width={20}
+                                height={20}
+                            />
+                            Mac OS
+                        </Button>
+                        <Button
+                            variant='tertiary'
+                            className='inline-flex gap-2 rounded-xl border-none bg-slate-800 px-4 py-3 text-base font-medium leading-normal text-white shadow'
+                        >
+                            <Image
+                                src={google_play_white}
+                                alt=''
+                                width={20}
+                                height={20}
+                            />
+                            Google Play
+                        </Button>
                     </div>
                 </div>
                 <div className='lg:w-1/2'>

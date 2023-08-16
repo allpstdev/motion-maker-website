@@ -17,7 +17,7 @@ const PricingPage = () => {
             <section className='relative left-0 right-0 top-0'>
                 <ContentHeader
                     customClass={'mx-auto flex flex-col max-w-screen-md items-center text-center px-6 lg:px-0'}
-                    pill_color={'primary'}
+                    variant={'secondary'}
                     pill_text={'Pricing'}
                     header_text={'Save time and effort with AI-enhanced animation'}
                     highlightHeaderWord={'time'}

@@ -10,7 +10,7 @@ import motion_maker_logo from '../public/motion_maker_logo.svg'
 import social_fb from '../public/social_fb.svg'
 import social_insta from '../public/social_insta.svg'
 import social_twitter from '../public/social_twitter.svg'
-import SecondaryButton from './SecondaryButton'
+import { Button } from './ui/button'
 
 const Navbar = () => {
     const params = useParams()
@@ -134,10 +134,13 @@ const Navbar = () => {
                                     Log in
                                 </a>
                             </div>
-                            <SecondaryButton
-                                text={'Try Motion Maker'}
+                            <Button
+                                variant='default'
+                                className='h-8 w-36 rounded-lg border border-slate-800 border-opacity-10 bg-white px-3 py-1.5 text-center text-sm font-medium leading-tight text-black shadow'
                                 onClick={() => console.log('TODO')}
-                            />
+                            >
+                                Try Motion Maker
+                            </Button>
                         </div>
                     </div>
                 </div>

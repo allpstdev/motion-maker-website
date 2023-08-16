@@ -2,6 +2,7 @@ import Image from 'next/image'
 import React from 'react'
 
 import check_line from '../../public/check_line.svg'
+import { Badge } from '../ui/badge'
 
 const PricingCard = ({ isCustom, isGradient, price, currency, header, pill_text, description, perks, button_color }) => {
     return (
@@ -16,9 +17,12 @@ const PricingCard = ({ isCustom, isGradient, price, currency, header, pill_text,
                     <div className='flex h-8 items-center justify-start gap-2'>
                         <div className='text-2xl font-semibold leading-loose text-slate-800'>{header}</div>
                         {pill_text && (
-                            <div className='flex h-6 items-center justify-start gap-1 rounded-[20px] bg-white px-2 py-0.5'>
-                                <div className='text-center text-sm font-medium leading-tight text-slate-800'>{pill_text}</div>
-                            </div>
+                            <Badge
+                                variant={'secondary'}
+                                className={'bg-white text-black'}
+                            >
+                                {pill_text}
+                            </Badge>
                         )}
                     </div>
                     <div className='h-6 text-base font-normal leading-normal text-slate-800 text-opacity-60'>{description}</div>

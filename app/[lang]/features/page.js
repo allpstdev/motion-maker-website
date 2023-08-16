@@ -4,11 +4,12 @@ import Card from '@/components/content/Card'
 import FeatureCardContent from '@/components/content/FeatureCardContent'
 import ContentHeader from '@/components/content/Header'
 import PinkGradientBackground from '@/components/PinkGradientBackground'
+import { Button } from '@/components/ui/button'
 import { dictionary } from '@/content'
+import { ArrowRight, Puzzle } from 'lucide-react'
 import Image from 'next/image'
 import { useState } from 'react'
 
-import arrow_right_primary from '../../../public/arrow_right_primary.svg'
 import check_verified_icon from '../../../public/check-verified-icon.svg'
 import chevron_right_icon from '../../../public/chevron_right_icon.svg'
 import feature_continuity_engine from '../../../public/feature_continuity_engine.png'
@@ -19,6 +20,7 @@ import features_demo_2 from '../../../public/features_demo_2.png'
 import features_lip_sync from '../../../public/features_lip_sync.png'
 import features_text_prompt from '../../../public/features_text_prompt.png'
 import features_visual_presets from '../../../public/features_visual_presets.png'
+import puzzle_piece from '../../../public/puzzle_piece.svg'
 import trial_image from '../../../public/trial_image.png'
 
 const FeaturesPage = ({ params }) => {
@@ -41,7 +43,7 @@ const FeaturesPage = ({ params }) => {
             <section className='relative left-0 right-0 top-0'>
                 <ContentHeader
                     customClass={'mx-auto flex flex-col max-w-screen-md items-center text-center px-6 lg:px-0'}
-                    pill_color={'primary'}
+                    variant={'secondary'}
                     pill_text={'Features'}
                     header_text={'Boost your next animation project with AI'}
                     highlightHeaderWord={'project'}
@@ -125,16 +127,14 @@ const FeaturesPage = ({ params }) => {
                                         </div>
                                     </div>
                                 </div>
-                                <div className='inline-flex items-center justify-center gap-2 rounded-xl bg-slate-800 bg-opacity-5 px-4 py-3'>
-                                    <div className='flex items-center justify-start gap-2'>
-                                        <div className='text-center text-base font-medium leading-normal text-black'>Learn more</div>
-                                        <Image
-                                            alt='chevron_right_icon'
-                                            src={chevron_right_icon}
-                                            className='ml-2'
-                                        />
-                                    </div>
-                                </div>
+                                <Button className='inline-flex w-fit gap-2 rounded-xl px-4 py-3 text-base font-medium leading-normal'>
+                                    Learn more
+                                    <Image
+                                        alt='chevron_right_icon'
+                                        src={chevron_right_icon}
+                                        className='ml-2'
+                                    />
+                                </Button>
                             </div>
                         </div>
                         <div className='relative h-full w-full pt-0 lg:w-2/3 lg:pt-12 xl:w-3/5'>
@@ -191,16 +191,15 @@ const FeaturesPage = ({ params }) => {
                                     duration of shots, and backgrounds.{' '}
                                 </div>
                             </div>
-                            <div className='inline-flex items-center justify-center gap-2'>
-                                <div className='text-base font-semibold leading-normal text-violet-700'>Learn more</div>
-                                <Image
-                                    src={arrow_right_primary}
-                                    alt=''
-                                    color='blue'
-                                />
-                            </div>
+                            <Button
+                                variant='link'
+                                className='inline-flex gap-2 text-base text-violet-700'
+                            >
+                                Learn more
+                                <ArrowRight className='w-4 text-violet-700' />
+                            </Button>
                         </div>
-                        <div className='self-stretch-l-2 border-gray-100border-gray-100 flex flex-col items-start justify-start  gap-5 border-l-2 py-4 pl-6'>
+                        <div className='self-stretch-l-2 flex flex-col items-start justify-start gap-5 border-l-2 border-gray-100 py-4 pl-6'>
                             <div className='flex flex-col items-center justify-start gap-2 self-stretch'>
                                 <div className='self-stretch text-xl font-semibold leading-[30px] text-gray-900'>The Animatic Builder </div>
                                 <div className='self-stretch text-base font-normal leading-normal text-slate-600'>
@@ -208,15 +207,15 @@ const FeaturesPage = ({ params }) => {
                                     duration of shots, and backgrounds.{' '}
                                 </div>
                             </div>
-                            <div className='inline-flex items-center justify-center gap-2'>
-                                <div className='text-base font-semibold leading-normal text-violet-700'>Learn more</div>
-                                <Image
-                                    src={arrow_right_primary}
-                                    alt=''
-                                />
-                            </div>
+                            <Button
+                                variant='link'
+                                className='inline-flex gap-2 text-base text-violet-700'
+                            >
+                                Learn more
+                                <ArrowRight className='w-4 text-violet-700' />
+                            </Button>
                         </div>
-                        <div className='self-stretch-l-2 border-gray-100border-gray-100 flex flex-col items-start justify-start  gap-5 border-l-2 py-4 pl-6'>
+                        <div className='self-stretch-l-2 flex flex-col items-start justify-start gap-5  border-l-2 border-gray-100 py-4 pl-6'>
                             <div className='flex flex-col items-center justify-start gap-2 self-stretch'>
                                 <div className='self-stretch text-xl font-semibold leading-[30px] text-gray-900'>The Asset Library </div>
                                 <div className='self-stretch text-base font-normal leading-normal text-slate-600'>
@@ -224,13 +223,13 @@ const FeaturesPage = ({ params }) => {
                                     duration of shots, and backgrounds.{' '}
                                 </div>
                             </div>
-                            <div className='inline-flex items-center justify-center gap-2'>
-                                <div className='text-base font-semibold leading-normal text-violet-700'>Learn more</div>
-                                <Image
-                                    src={arrow_right_primary}
-                                    alt=''
-                                />
-                            </div>
+                            <Button
+                                variant='link'
+                                className='inline-flex gap-2 text-base text-violet-700'
+                            >
+                                Learn more
+                                <ArrowRight className='w-4 text-violet-700' />
+                            </Button>
                         </div>
                     </div>
                     <div className='relative h-96 w-full lg:h-auto'>
@@ -288,15 +287,14 @@ const FeaturesPage = ({ params }) => {
                                         tincidunt aenean duis mollis amet tincidunt. A lacus sollicitudin.
                                     </div>
                                 </div>
-                                <div className='inline-flex items-center justify-center gap-2 rounded-xl bg-slate-800 bg-opacity-5 px-4 py-2'>
-                                    <div className='flex items-center justify-start gap-2'>
-                                        <div className='text-center text-base font-medium leading-normal text-black'>Learn more</div>
-                                        <Image
-                                            src={chevron_right_icon}
-                                            alt=''
-                                        />
-                                    </div>
-                                </div>
+                                <Button className='inline-flex w-fit gap-1 rounded-xl px-4 py-2 text-base font-medium leading-normal'>
+                                    Learn more
+                                    <Image
+                                        alt='chevron_right_icon'
+                                        src={chevron_right_icon}
+                                        className='ml-2'
+                                    />
+                                </Button>
                             </div>
                         </div>
                         <div className='relative h-full w-full pt-0 lg:w-3/5 lg:pt-12 xl:w-3/5'>
@@ -385,7 +383,7 @@ const FeaturesPage = ({ params }) => {
             <section className='container mx-auto flex flex-col px-6 py-16 lg:flex-row lg:px-0'>
                 <div className='my-32 w-full lg:w-1/2'>
                     <ContentHeader
-                        pill_color={'primary'}
+                        variant={'secondary'}
                         pill_text={'Get Started'}
                         header_text={'Start you free trial'}
                         description_text={
@@ -393,10 +391,18 @@ const FeaturesPage = ({ params }) => {
                         }
                         customClass={'flex flex-col'}
                     />
-                    <div className='mt-6 inline-flex h-[60px] w-full max-w-lg items-center justify-center gap-3 rounded-xl bg-gradient-to-r from-violet-500 to-violet-400 px-7 py-4 shadow'>
-                        <div className='text-lg font-semibold leading-7 text-white'>Start your 30-day free trail</div>
-                        <div className='relative h-6 w-6' />
-                    </div>
+                    <Button
+                        variant='secondary'
+                        className='mt-6 inline-flex w-full max-w-lg gap-2 rounded-xl px-7 py-4 text-lg font-semibold shadow'
+                    >
+                        Start your 30-day free trail
+                        <Image
+                            src={puzzle_piece}
+                            width={24}
+                            height={24}
+                            alt='puzzle piece'
+                        />
+                    </Button>
                 </div>
                 <div className='w-full lg:w-1/2'>
                     <div className='relative mx-auto aspect-square h-auto w-full lg:w-[528px]'>

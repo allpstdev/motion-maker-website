@@ -22,7 +22,7 @@ const AboutPage = ({ params }) => {
             <section className='relative left-0 right-0 top-0'>
                 <ContentHeader
                     customClass={'mx-auto flex flex-col max-w-screen-md items-center text-center px-6 lg:px-0'}
-                    pill_color={'primary'}
+                    variant={'secondary'}
                     pill_text={'About us'}
                     header_text={'Fundamentals Artificial Intelligence AG'}
                     highlightHeaderWord={'Artificial Intelligence'}
